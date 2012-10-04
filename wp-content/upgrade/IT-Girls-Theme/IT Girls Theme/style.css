@@ -1,0 +1,49 @@
+/*
+Theme Name: It Girls
+Description: Custom theme for It Girls
+Author: Michael Clarke and Michael Cummings @ Syracuse iSchool
+Version: 1.0
+*/
+
+* {margin:0; padding:0;} /* reset */
+
+body {
+	font-family: Arial,Helvetica,sans-serif; 
+	font-size:.875em; 
+	line-height:1.5em; 
+	color:#333; 
+	background-color:#9c0047;
+	background-image:url(images/background.png); 
+	background-repeat:repeat-x; 
+}
+
+h1, h2, h3, h4, h5, h6 {margin-top:24px; margin-bottom:14px; font-weight:normal; color:#333;}
+h1 {font-size: 3em; line-height: 1em;  font-weight:bold;}
+h2 {font-size: 2.8em; line-height: 1.0909em;}
+h3 {font-size: 2.2em; line-height: 1.2em;}
+h4 {font-size: 2em; line-height: 1.333em;}
+h5 {font-size: 1.5em; line-height: 1.5em;}
+
+#container {margin:auto; width:900px;}
+#container a {color:#f60; text-decoration:underline;}
+#container img {border-style:none;}
+
+#header {padding-top:20px;}
+#header img {float:left; margin-bottom:-75px;}
+#nav {height:60px; margin-top:50px; clear:both}
+#nav a {color:#fff; text-decoration:none;}
+#nav ul {list-style:none;}
+#nav ul li {float:right; display:block;}
+#nav ul li a {margin:10px 8px 8px 8px; padding:10px 10px; color:white; font-size:16px; font-weight:bold; }
+#nav ul li a:hover {background:#fff; color:#9c0047; text-decoration:none;}
+#nav .current_page_item a {background:#fff; color:#9c0047 !important;}
+
+#content {padding:10px 30px 50px 30px; color:#fff;}
+#content h1 {color:#fff; font-size:28px;}
+#content p {margin:10px 0;}
+#post a {color:#fff; font-weight:bold;}
+#post h2 {color:#fff; font-size:22px;}
+#post ol {list-style:none; padding-left:20px;}
+#post ol li {margin:5px 0;}
+
+#footer {border-top:1px solid #c07b9a; padding-top:10px; margin-bottom:90px; font-size:12px; color:#c07b9a; text-align:right;}

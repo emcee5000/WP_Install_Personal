@@ -1,0 +1,151 @@
+html, body {
+	overflow: hidden;
+	padding: 0px;
+	margin: 0px;
+	vertical-align: baseline;
+}
+body{
+	font-family: Verdana, sans-serif;
+	background-color: #DDD;
+	font-size: 14px;
+	line-height: 26px;
+}
+ul, li, h4, h3, h2, h1, p{
+	padding:0;
+	margin:0;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	list-style:none;
+}
+.logo-float {
+	float: left;
+	position:absolute;
+	left: 10px;
+	top: 15px;
+	z-index: 100000;
+}
+
+.name-float {
+	float: left;
+	position:absolute;
+	left: 10px;
+	top: 15px;
+	z-index: 100000;
+}
+
+.footer {
+	float: left;
+	position:absolute;
+	left: 0px;
+	bottom: 0px;
+	z-index: 100001;
+	width: 100%;
+	height: 20%;
+	text-align: center;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 36px;
+	text-decoration: none;
+}
+
+.footer h1 {
+	color: white;
+}
+
+.next, .prev{
+	cursor:pointer;
+}
+	
+#sections {
+	position: relative;
+	overflow:hidden;
+	width: 2000px;
+	height: 1500px;
+	clear:left;
+}
+
+.res-800-600 {
+	width:800px;
+	height:600px;
+}
+.res-800-600 li.slidepost{
+	padding-top: 30px;
+	padding-left: 47px;
+}
+.res-1024-768 {
+	width:1024px;
+	height:768px;
+}
+.res-1024-768 li.slidepost{
+	padding-top: 30px;
+	padding-left: 159px;
+}
+.res-1280-768 {
+	width:1280px;
+	height:768px;
+}
+.res-1280-768 li.slidepost{
+	padding-top: 30px;
+	padding-left: 287px;
+}
+.res-1280-800 {
+	width:1280px;
+	height:800px;
+}
+.res-1280-800 li.slidepost{
+	padding-top: 30px;
+	padding-left: 287px;
+}
+.res-1360-768 {
+	width:1360px;
+	height:768px;
+}
+.res-1360-768 li.slidepost{
+	padding-top: 30px;
+	padding-left: 327px;
+}
+.res-1680-1050 {
+	width:1680px;
+	height:1050px;
+}
+.res-1680-1050 li.slidepost{
+	padding-top: 30px;
+	padding-left: 487px;
+}
+.res-1920-1080 {
+	width:1920px;
+	height:1080px;
+}
+.res-1920-1080 li.slidepost{
+	padding-top: 30px;
+	padding-left: 607px;
+}
+	
+#sections ul.slidepost{
+	width:100000px;
+}
+
+#sections li.slidepost {
+	float:left;
+}
+
+#sections li.fallen1 {
+	margin-top:369px;
+}
+#sections li.fallen2 {
+	margin-top:738px;
+}
+#sections li.fallen3 {
+	margin-top:1107px;
+}
+
+#sections li.titleonly {
+	margin-top: 1%;
+}
+
+.footer h1 {
+	position: inherit;
+	width: 100%;
+	margin-top: 45%;
+	font-size: 24px;
+	text-align: center;
+}

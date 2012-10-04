@@ -1,0 +1,400 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Guide to the Pointelle Slider WordPress plugin</title>
+<link rel="shortcut icon" href="http://slidervilla.com/wp-content/themes/slidervilla/img/favicon.png" type="image/png" />
+<link rel="stylesheet" href="guide.css" type="text/css" media="screen" />
+<script type="text/javascript"> 
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6461547-12']);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script> 
+</head>
+<body>
+
+<h1>A guide to Pointelle Slider WP Plugin</h1>
+
+<p class="first"><em>Pointelle Slider</em> is a customizable WordPress plugin that will help you adding a very attractive featured content slider with fade or sliding effects to your WordPress site's front page, other pages, posts, sidebar widgets etc.</p>
+
+<p class="second">The posts, pages and the media library images can be easily added to the slider thru the edit panel on the WordPress admin.</p>
+
+<p class="second">The slider can be easily inserted anywhere on the site either using a template tag in the respective <a href="http://codex.wordpress.org/Template_Hierarchy#The_Template_Hierarchy_In_Detail" title="WordPress Template Files">template file</a> or using Pointelle Slider shortcode or using a simple widget. Also you can create multiple sliders, so that you can display different content in slider on different pages. And the best thing is, you can create multiple settings as well, and while embedding the slider you can specify which setting you would need for a particular instance of slider.</p>
+
+<p class="second">The slider can be very easily customized using the easy admin panel options. If you want to change the design of the slider with minute details, you should have some knowledge of CSS, so that you can create your own styles and change the looks of the slider as you wish.</p>
+
+<div style="border:1px solid #aaa;background:#fafafa;padding:20px 10px;">
+<p id="index" class="first borderB"><strong>Index</strong></p>
+<ol>
+<li><a href="#install">How to install the plugin</a></li>
+<li><a href="#implement">Basic steps to implement the Pointelle Slider</a></li>
+<li><a href="#template_tags">Vaious Ways to Embed the Pointelle Slider on your Site</a></li>
+<li><a href="#settings">'Settings' and Options Available</a></li>
+<li><a href="#sliders">Sliders Settings Available</a></li>
+<li><a href="#faqs">Frequently Asked Questions</a></li>
+<li><a href="#support">Plugin Support</a></li>
+<li><a href="#licensing">Licensing and Terms of use</a></li>
+</ol>
+
+
+<p id="faqs" class="second borderB"><strong>Frequently Asked Questions</strong></p>
+<ol>
+<li><a href="#how_to_multiple_settings">How to create Multiple Settings?</a></li>
+<li><a href="#how_to_apply_settings">How to apply various settings to the Sliders?</a></li>
+<li><a href="#how_to_create_stylesheets">How to create different stylesheets for Pointelle Sliders?</a></li>
+<li><a href="#how_to_change_navigation_title">How to assign different navigation title than the Post/Page Title for the slide in Pointelle Slider?</a></li>
+<li><a href="#navigation_post_meta">What are the Available Post Meta Functions and Parameters for Pointelle Slider and how to use them?</a></li>
+<li><a href="#how_to_add_media_images">How to add media library images to the slider?</a></li>
+<li><a href="#how_to_change_slide_link">How to link the slide to different URL than the post/page permalink?</a></li>
+<li><a href="#disable_promotionals_on_admin">How to disable the promotional ads on the settings page?</a></li>
+</ol>
+<p><strong><a target="_blank" href="http://slidervilla.com/pointelle/category/faq" title="Tips, Tricks and FAQs updated regularly">Check out more FAQs here...</a></strong></p>
+</div>
+
+<h2 id="install" class="borderB">How to install the plugin</h2>
+
+<ol>
+	<li>Uzip the <code>pointelle-slider.zip</code> folder.</li>
+	<li>Upload the <code>pointelle-slider</code> folder to your <code>/wp-content/plugins</code> directory.</li>
+	<li>In your WordPress dashboard, head over to the <em>Plugins</em> section.</li>
+	<li>Activate <em>Pointelle Slider</em>.</li>
+</ol>
+
+<h2 id="implement" class="borderB">Basic steps to implement the Pointelle Slider</h2>
+
+<ol>
+	<li>Activate the plugin.</li>
+	<li>Add the posts,pages and/or media library images to the slider. You would get 'Add to Pointelle Slider' checkbox on the edit panel (of post/page/image) after plugin activation.</li>
+	<li>Go to slider settings -> Change the width of the slider and the height of the slides and navigation section, depending on your theme width and your requirement. You can change other parameters like colors, borders, image size, image location and whether to show the post content or not etc.</li>
+	<li>Now you can insert the Pointelle Slider on your WordPress site using either the template tag or the shortcode or the widget as follows.</li>
+</ol>
+
+<h2 id="template_tags"></h2>
+<h3 id="tag">Pointelle Slider Template tag</h3>
+
+<pre><code>&lt;?php if ( function_exists( 'get_pointelle_slider' ) ) {
+  get_pointelle_slider(); } ?&gt;</code></pre>
+  
+<p>In case you use multiple sliders option,</p>
+
+<pre><code>&lt;?php if ( function_exists( 'get_pointelle_slider' ) ) {
+  get_pointelle_slider('2'); } ?&gt;</code></pre>
+
+<p class="second">Where '2' is the <code>slider ID</code>, which you can get from the 'Sliders' settings panel.</p>
+
+<h3 id="shortcode">Pointelle Slider Shortcode</h3>
+
+<p>Put the below shortcode in the post/page editor to embed the Pointelle Slider in the post/page content.</p>
+
+<p>[pointelleslider]</p>
+
+<p>In case you use multiple sliders option,</p>
+
+<p>[pointelleslider id='2']</p>
+
+<p class="second">Where '2' is the <code>slider ID</code>, which you can get from the 'Sliders' settings panel.</p>
+
+<h3 id="widget">Pointelle Slider Widget</h3>
+
+<p>You have got a 'Pointelle Slider Simple' widget on Widget administration panel. Just insert the widget in any of the active widget of your theme.</p>
+<p>Also you have got a 'Pointelle Slider - Category' widget on Widget administration panel. You can select the name of the category from the dropdown, and select which settings to apply (multiple settings can be created thru Settings admin panel).</p>
+
+<p>Also you have got a 'Pointelle Slider - Recent Posts' widget on Widget administration panel. You can select which settings to apply (multiple settings can be created thru Settings admin panel) to this Slider as well.</p>
+
+<h3 id="category">Pointelle Slider Category Template tag</h3>
+
+<p>You can use the below template tag to display the posts under particular category in chronologically reverse order:-</p>
+
+<pre><code>&lt;?php if ( function_exists( 'get_pointelle_slider_category' ) ) {
+  get_pointelle_slider_category($catg_slug); } ?&gt;</code></pre>
+  
+<p><strong>Real World Example:</strong></p>
+
+<pre><code>&lt;?php if ( function_exists( 'get_pointelle_slider_category' ) ) {
+  get_pointelle_slider_category('social-media'); } ?&gt;</code></pre>
+  
+where 'social-media' (don't forget the quotes) is the slug of the category from which you wish to pull the posts in reverse chronological order (latest is shown first).
+
+<h3 id="category">Pointelle Slider Recent Posts Template tag</h3>
+
+<p>You can use the below template tag to display the recent posts added to your WordPress site/blog in chronologically reverse order:-</p>
+
+<pre><code>&lt;?php if ( function_exists( 'get_pointelle_slider_recent' ) ) {
+  get_pointelle_slider_recent(); } ?&gt;</code></pre>
+  
+
+<h2 id="settings" class="borderB">'Settings' Admin Panel</h2>
+
+<img src="pointelle_slider_elements.png" alt="Pointelle Slider Components" />
+
+<p>The Settings fall under three sections:</p>
+<ol>
+<li><a href="#tab1">Basic Settings Tab</a></li>
+<li><a href="#tab2">Left Slides Panel Tab</a></li>
+<li><a href="#tab3">Right Navigation Buttons Tab</a></li>
+</ol>
+
+<h4 id="tab1">Basic Settings Tab</h4>
+
+<h5>Basic Settings</h5>
+<p>You can set the Slide transition speed, number of posts (slides) in the slider, background color, width and height of the content slides, border settings here.</p>
+
+<p><strong>Slide Transition Speed : </strong>This is the time between the transition of the slides. In case you want slow transition, enter high value like 9 or 10. If you want fast sliding, enter smaller value like 2 or 3.</p>
+
+<p><strong>Slide Transition Effect : </strong>Select the type of animation you would like while the slider slides. Pointelle Slider supports 4 different transition effects viz. Fade effect, Vertical Sliding, Horizontal Sliding and Horizontal Uncvering Transition.</p>
+
+<p><strong>Number of Posts in the Pointelle Slider : </strong>Specify how many posts you would want in Pointelle Slider, default being 3.</p>
+
+<p><strong>Complete Slider Width : </strong>If you enter 0, the slider will take the width of the container. If you enter numeric value greater than 0, it would be the width of the slider.</p>
+
+<p><strong>Slider Height : </strong>Overall height of the Slide section.</p>
+
+<p><strong>Slide Background Color : </strong>Background Color of the Slides Section.</p>
+
+<h5>Miscellaneous</h5>
+
+<p><strong>Retain these html tags : </strong>You can retain links and br tags in the slider posts. Against this settings, put all the html tags that you wish to retain in the 'Retain these html tags' input field.  Put the tags in the following manner,</p>
+
+<p>&lt;br&gt;&lt;a&gt;&lt;p&gt;</p>
+
+<p>Do not separate them using commas, neither use &frasl; anywhere.</p>
+
+<p><strong>Minimum User Level to add Post to the Slider : </strong> This seeting indicates which users can add or remove the posts/pages/media images to the slider. You can give the permission to editors but not authors or keep the access restricted to the 'Administrator' from here.</p>
+
+<p><strong>Randomize Slides in Slider : </strong> You can randomize the slides added to the slider, so that everytime the page on which slider is embedded loads, the slides would appear in random order to the reader.</p>
+
+<p><strong>Text to display in the JavaScript disabled browser : </strong> If the Javascript support is disabled or JS is not supported by the visitor's browser, this text would be displayed to the visitor saying that here is a slideshow which you can view in proper format if you enable the JS support on your browser.</p>
+
+<p><strong>Pointelle Slider Styles to Use on Other than Post/Pages : </strong> You can creae your own styles for Pointelle Slider. From here you can select which stylesheet should be used on general templates (i.e. like index.php or category.php or archives.php) of your site (other than single posts and pages). For the sliders embedded on posts and pages, the stylesheet specified in this settings field would be default stylesheet, but you can individually select another stylesheet from the edit post/page panel for that specific post/page. </p>
+
+<p><strong>Multiple Slider Feature : </strong> Tick this box to enable the switch to create and embed 'multiple sliders'. Once this checkbox is ticked, you would get an option to create a new slider on the 'Sliders' admin page under 'Pointelle Slider' settings. Also, you can add posts to various created sliders and embed different sliders on different pages.</p>
+
+<p><strong>Enable FOUC : </strong> In case you tick this option, while the page with the slider is loaded, you can see the Flash of Unstyled content (i.e. the content in the slider will appear without any styling while the web page is loading). This box is uncheked by default, which means the complete slider with its content will be loaded at once when the complete DOM elements (html page) is ready and loaded.</p>
+
+<pre><code>#slider_id_1 .sldr_title{background:#cccccc} 
+#slider_id_2 .sldr_title{background:#ff0000;color:#fff;}</code></pre>
+
+<h4 id="tab2">Left Slides Panel</h4>
+
+<h5>Slide Image</h5>
+
+<p>These settings apply to the images extracted for the larger slides on the left hand section of the slider.</p>
+
+<p><strong>Image Pick Preferences : </strong> This setting indicates in what priority you want the images extracted for the post or the page. There are four entries, if all the checkboxes are checked that means the post/page will be scanned for the images in following sequence:</p>
+<ol>
+    <li>Looks for an image by custom field. By default the custom field is slider_thumbnail. You can change its value, may be if you want to use the 'thumbnail' custom field.</li>
+    <li>If no image is added by custom field, check for a post image/featured image set for the post (WordPresss 2.9+ feature).</li>
+    <li>If no image is found, it grabs an image attached to your post.</li>
+    <li>If no image is attached, it can extract an image from your post content.</li>
+</ol>
+
+<p>Say if you uncheck the 'Consider Images attached to the post  ...  Order of the Image attachment to pick ' checkbox, it will skip the step 3 above.</p>
+<p>Say, if you do not want the scanner to look to thumbnails and featured image and just directly pick the image from the post content, just untick the first three boxes and keep the fourth box checked.</p>
+
+<p>Other settings include Image extract size, Display Image Size (width and height of the image) and border settings.</p>
+
+<p>You can tick the check box saying 'Make pure Image Slider' in case you want only images in the slides and no content.</p>
+
+<h5>Post Title</h5>
+
+<p>These settings control the look of the title of the slide in the Left Section.</p>
+<p>You can choose to show or do not show the Slide title, in case you only need the title in Navigation section</p>
+
+<h5>Slide Content</h5>
+<p><strong>Show content in slides below title : </strong> Checking this box will enable the content/excerpt to be displayed below the title of the slide. By default this is OFF.</p>
+
+<p>You can customize the looks, font, color etc. of the Slide Content area here. </p>
+
+<p>You can choose how you would want the slider to pull the content i.e. 'From Post Content', 'Post Excerpt' or 'Slider Content Custom Field'. If you set it to 'Slider Content Custom Field', you should assign the value to 'slider_content' custom field as the content for the slide.</p>
+
+<p><strong>Maximum content size : </strong> You can specify the maximum content size in the slide either in number of characters or in number of words. The 'number of words' value if entered will override the 'number of characters' value. So if you want the maximum content size in 'number of characters' leave the 'numer of words' setting to blank (do not enter any value in it).</p>
+
+<h4 id="tab3">Right Navigation buttons</h4>
+
+<h5>Navigation Button</h5>
+<p>Here you can customize the Width, Height, Background Color and Border Color of the Navigation Buttons on the right</p>
+<h5>Thumbnail Image</h5>
+<p>Here you can customize the Width, Height, and the border of the thumbnail Image in the navigation button</p>
+<h5>Title in Navigation</h5>
+<p>Here you can customize the Maximum Slide Navigation Title Size (in words) and font properties of the title in Navigation Buttons</p>
+<h5>Post Meta in Navigation</h5>
+<p>Here you can customize the content (data) pulled in this section and its font properties</p>
+
+<p>Read more on Available Post Meta Functions and Parameters for Pointelle Slider here.</p>
+
+<h2 id="sliders">'Sliders' Admin Panel</h2>
+
+<p>Through this panel, you can remove the post/page/media image added to the slider directly or completely empty the slider. Also in case you enambe the 'Multiple Sliders Feature', you can create new sliders from this panel and delete the sliders.</p>
+
+<p>Also, you can reorder the entries in the slider thru this settings panel.</p>
+
+<h2 id="faqs" class="borderB">FAQs</h2>
+
+<h5 id="how_to_multiple_settings">How to create Multiple Settings?</h5>
+
+<p class="second">On the 'Settings' admin panel of Pointelle Slider, at the top you would see 'Create New Settings Set' button. Click the button, you would be asked to confirm that you need to create a new settings set</p>
+
+<p class="second">Once you create a new settings set, you would still be served the current settings. You can access and modify the new settings using the settings link on the right sidebar named 'Setting Panels'.</p>
+
+<p class="second">Before modifying the settings, do check on which settings panel you currently are. You can check this using the title of the Settings page which would be such as 'Pointelle Slider Settings Default', 'Pointelle Slider Settings 2' and so on</p>
+
+<h5 id="how_to_apply_settings">How to apply various settings to the Sliders?</h5>
+
+<h3 id="tag">Pointelle Slider Template tag</h3>
+
+<pre><code>&lt;?php if ( function_exists( 'get_pointelle_slider' ) ) {
+  get_pointelle_slider($slider_id='1',$set='2'); } ?&gt;</code></pre>
+  
+<p>In case you use multiple sliders option,</p>
+
+<pre><code>&lt;?php if ( function_exists( 'get_pointelle_slider' ) ) {
+  get_pointelle_slider($slider_id='2',$set=''); } ?&gt;</code></pre>
+
+<p class="second">Where '2' is the <code>slider ID</code>, which you can get from the 'Sliders' settings panel.</p>
+<p class="second">In case you enter <code>''</code> (empty) for the $set, it will take the default settings.</p>
+
+<h3 id="shortcode">Pointelle Slider Shortcode</h3>
+
+<p>Put the below shortcode in the post/page editor to embed the Pointelle Slider in the post/page content.</p>
+
+<p>[pointelleslider set='2']</p>
+
+<p>In case you use multiple sliders option,</p>
+
+<p>[pointelleslider id='2']</p>
+<p>[pointelleslider id='2' set='3']</p>
+
+<p class="second">Where '2' is the <code>slider ID</code>, which you can get from the 'Sliders' settings panel and '3' is the ID of the settings created.</p>
+
+<h3 id="category">Pointelle Slider Category Template tag</h3>
+
+<p>You can use the below template tag to display the posts under particular category in chronologically reverse order:-</p>
+
+<pre><code>&lt;?php if ( function_exists( 'get_pointelle_slider_category' ) ) {
+  get_pointelle_slider_category($catg_slug,$set=''); } ?&gt;</code></pre>
+  
+<p><strong>Real World Example:</strong></p>
+
+<pre><code>&lt;?php if ( function_exists( 'get_pointelle_slider_category' ) ) {
+  get_pointelle_slider_category($catg_slug='social-media',$set='2'); } ?&gt;</code></pre>
+  
+where 'social-media' (don't forget the quotes) is the slug of the category from which you wish to pull the posts in reverse chronological order (latest is shown first).
+
+<h3 id="category">Pointelle Slider Recent Posts Template tag</h3>
+
+<p>You can use the below template tag to display the recent posts added to your WordPress site/blog in chronologically reverse order:-</p>
+
+<pre><code>&lt;?php if ( function_exists( 'get_pointelle_slider_recent' ) ) {
+  get_pointelle_slider_recent($set='2'); } ?&gt;</code></pre>
+
+<h5 id="how_to_create_stylesheets">How to create different stylesheets for Pointelle Sliders?</h5>
+
+<p class="second">You should have FTP access to your site's folder in oredr to create your own styles.</p>
+
+<p class="second">Go to wp-content =&gt; plugins =&gt; pointelle-slider folder =&gt; css =&gt; skins </p>
+
+<p class="second">Create a new folder with a name say... 'custom'. Copy the content of 'sample' folder into 'custom' folder. Now go to custom folder => &gt; style.css file. Open it with Notepad or Notepad++ or the editor you use to edit CSS files, add and modify/remove your own CSS rules. Save the CSS file. Upload the complete custom folder to the server, inside the <strong>skins</strong> folder.</p>
+
+<p class="second">Now on the Pointelle Slider settings page =&gt; go to 'Miscellaneous' settings =&gt; You would get value as 'custom' in dropdown for the setting 'Pointelle Slider Styles to Use on Other than Post/Pages'. Select 'csutom' and save the settings.</p>
+
+<p class="second">As well, on Post/Page edit panel, you would get an option saying 'Stylesheet to use if slider is displayed on this Post/Page ' under 'Pointelle Slider' custom meta box. Select the value as 'custom' and save the post/page.</p>
+
+<p class="second">You can create any number of style folders as 'custom' and name them whatever you want. </p>
+
+<h5 id="how_to_change_navigation_title">How to assign different navigation title than the Post/Page Title for the slide in Pointelle Slider?</h5>	
+
+<p class="second">By default the navigation title for a particular slider is picked as first 5 words of the post/page title. </p>
+
+<p class="second">You can change this value to custom text like 'Slide 1 Title' or 'Category A Featured Slide' or whatever using the custom field <strong>slide_nav</strong> for the post/page. </p>
+
+<p class="second">Also, you can change the 5 character restriction to 4 or 6 using the <strong>Right Navigation Button Settings => Title in Navigation => Max. Slide Navigation Title Size (in words)</strong> on Settings panel.</p>
+
+<h5 id="navigation_post_meta">What are the Available Post Meta Functions and Parameters for Pointelle Slider and how to use them?</h5>	
+
+<p class="second">You can have atmost two Post Meta Fields namely Meta 1 and Meta 2 displayed in the navigation section of the Pointelle Slider. </p>
+<p class="second">The fields are pulled dynamically and you can set what meta information should be displayed in those fields.</p>
+<p class="second">Currently there are four Meta Functions that can be used in the settings field. </p>
+<ol>
+<li>pointelle_get_slide_author 
+<br />
+<p class="second">Meta Function to get author data in Post Meta field. For this function the function parameters can be <a href="http://codex.wordpress.org/Function_Reference/the_author_meta#Parameters"> WordPress 'author' object fields.</a> For example</p>
+ <ul>
+     <li>field=display_name</li>
+     <li>field=user_login</li>
+ </ul>
+</li>
+<li>pointelle_get_slide_pub_date
+<br />
+<p class="second">Meta Function to get the published date of Post/Page in any format in Post Meta field. For this function the function parameters can be any of the format specified in <a href="http://php.net/manual/en/function.date.php">PHP Date Manual .</a> For example</p>
+ <ul>
+     <li>format=M j, Y</li>
+     <li>format=Y-m-d</li>
+ </ul>
+ </li>
+<li>pointelle_get_slide_category_name
+<br />
+<p class="second">Meta Function to get the Poat category/categories in Post Meta field. For this function the function parameters can be one of the below two, the fisrt one showing the the first category to which the post belongs and the second one (all) showing all the categories to which the post belongs:-</p>
+ <ul>
+     <li>show=first</li>
+     <li>show=all</li>
+ </ul>
+ </li>
+<li>pointelle_get_slide_comments_number
+<br />
+<p class="second">Meta Function to get the post comments number in the Post Meta field. For this function the function parameters similar to <a href="http://codex.wordpress.org/Function_Reference/comments_number">comments_number WordPress function</a>. For example:-</p>
+ <ul>
+     <li>zero=No Response&one=1 Response&more=% Responses</li>
+     <li>zero=No Comments&one=1 Comment&more=% comments</li>
+ </ul>
+</li>
+</ol>
+
+<p class="second">Also you can specify what text (with html) you would want to display before and after the meta fields.</p>
+
+<h5 id="how_to_add_media_images">How to add media library images to the slider?</h5>
+
+<p class="second">Go to Edit Media thru Media =&gt; Library and open the image in edit mode. You would get an option to add the media image to the Pointelle Slider, you can assign the link URL to which the lside will link and you can also choose not to link a particular image to any URL.</p>
+
+<h5>How to to assign different 'Slider Title' for various sliders created?</h5>
+
+<p class="second">In case you select multiple sliders option, you are able to create and embed different sliders with different content on various pages of your WordPress site. You may wish to have different Slider Titles for different sliders created (mostly when you are inserting the slider thru Pointelle Slider Widget). Yes, you can do that!!</p>
+
+<p class="second">When you create a new slider, you can give different names to different sliders created, which can be used as slide title. Go to Pointelle Slider 'Settings' =&gt; Slider Title settings =&gt; Pick Slider Title From =&gt; and select 'Slider Name' for the settings. Save the settings.</p>
+
+<p class="second">Also if you are using Category Widget or Reent Posts Slider Widget for Pointelle, you would get an option to enter the Slider title of your choice.</p>
+
+<h5 id="how_to_change_slide_link">How to link the slide to different URL than the post/page permalink?</h5>
+
+<p class="second">On the Edit Post/Page/Media image panel under Pointelle Slider fields, you would get an input field named 'Slide Link URL', you can input whatever URL you want the slide to link to in this field. Save the entry.</p>
+
+<h5>How to disable the linking of the slide to any URL?</h5>
+
+<p class="second">On the Edit Post/Page/Media image panel under Pointelle Slider fields, you would get an checkbox named 'Do not link this slide to any page(url)', you can uncheck the box to choose not to link the slide to any url. Save the entry.</p>
+
+<h5 id="disable_promotionals_on_admin">How to disable the promotional ads on the settings page?</h5>
+
+<p class="second">Go to Pointelle Slider 'Settings' =&gt; Miscellaneous settings =&gt; Show Promotionals on Admin Page =&gt; and select 'No' for the settings. Save the settings.</p>
+
+<h2 id="support" class="borderB">Plugin Support</h2>
+
+<p>Once you purchase the slider, you would be provided with a recipt reference number in email, to which you can reply anytime if you get any issue while implementing the plugin. </p>
+
+<h2 id="licensing" class="borderB">Licensing</h2>
+
+<p class="second">Please read the licensing terms at <a href="http://slidervilla.com/licensing/" title="Pointelle Slider WordPress plugin Licensing Terms" target="_blank">http://slidervilla.com/licensing/</a></p>
+
+<p class="second">This plugin is copyrighted to <a href="http://www.wpoptimus.com/" title="Tejaswini Deshpande" target="_blank">Tejaswini Deshpande</a>.</p>
+
+<p>2010&thinsp;&ndash;&thinsp;2011 &copy; SliderVilla.  All rights reserved.</p>
+<div style="position:fixed;top:0;right:10%;background:#fafafa;border:1px solid #ccc;padding:8px;"><strong><a href="#index">Go to Index &uarr;</a></strong></div>
+
+</body>
+</html>

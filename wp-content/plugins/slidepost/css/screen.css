@@ -1,0 +1,81 @@
+.container {
+	background: url(images/screen/background.jpg);
+	width: 950px;
+	margin: 0 auto;
+	position: relative;
+}
+.block_content {
+	display: block;
+}
+.content_area {
+	float: left;
+	width: 706px;
+}
+.block {
+	position: relative;
+}
+.block_inside_title {
+	background: url(images/screen/page-background.png) no-repeat;
+	display: block;
+	overflow: auto;
+	padding-top: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.block_inside_content {
+	background: url(images/screen/page-background-spacer.png) repeat-y;
+	display: block;
+	overflow: auto;
+	padding-bottom: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.block_end {
+	background: url(images/screen/page-bottom.png) no-repeat;
+	width: 706px;
+	height: 34px;
+}
+.title {
+}
+h2, h2 a {
+	color: black;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 36px;
+	letter-spacing: -1px;
+	line-height: 40px;
+	text-decoration: none;
+	padding-top: 30px;
+}
+h3, h3 a {
+    margin:10px 0px 10px 0px;
+    font-size:20px;
+    line-height:25px;
+    font-family: Helvetica, Arial, Sans-serif;
+    color:#000000;
+}
+.content_area .separator {
+	border-top:1px solid #e3e3e3;
+	margin-top:20px;
+	padding-top:20px;
+}
+.footer {
+	background: url(images/screen/footer-background.png) repeat-x 0px 0px;
+}
+.titleaddress {
+	clear: left;
+	float: left;
+	width: 300px;
+}
+.pricedetailsviewing {
+	clear: right;
+	float: right;
+	text-align: right;
+}
+small {
+    color: #9c9c9c;
+    font-weight: bold;
+    font-size: 11px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 15px;
+}
